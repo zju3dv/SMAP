@@ -1,6 +1,5 @@
 # SMAP: Single Single-Shot Multi-Person Absolute 3D Pose Estimation
 
-![introduction](./assets/introduction.png)
 
 > [SMAP: Single Single-Shot Multi-Person Absolute 3D Pose Estimation]()  
 > Jianan Zhen\*, Qi Fang\*, Jiaming Sun, Wentao Liu, Wei Jiang, Hujun Bao, Xiaowei Zhou  
