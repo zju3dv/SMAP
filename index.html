@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>SMAP: Single-Shot Multi-Person Absolute 3D Pose Estimation</title>
+
+  <style type="text/css">
+    body {
+      margin: 0px;
+      background-color: #F3F3F3;
+      font-family: 'PT Sans', 'Arial';
+    }
+
+    h1 {
+      text-align: center;
+      color: #444444;
+      font-size: 36px;
+      margin-top: 50px;
+      margin-bottom: 0px;
+    }
+
+    h2 {
+      margin-top: 120px;
+      margin-bottom: 10px;
+      color: #FFCF43;
+      font-size: 30px;
+    }
+
+    #headerdiv {
+      width: 1150px;
+      margin: auto;
+    }
+
+    #maincontent {
+      width: 1000px;
+      margin: auto;
+      height: 340px;
+    }
+
+    #suppcontent {
+      padding-top: 0px;
+      background-color: black;
+      color: #BBBBBB;
+      font-size: 16px;
+    }
+
+    #content {
+      width: 1000px;
+      margin: auto;
+    }
+
+    td {
+      vertical-align: top;
+      text-align: center;
+    }
+
+    .desc {
+      color: #888888;
+    }
+
+    .center {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    .nips {
+      text-align: center;
+      margin-top: 0px;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .nips a {
+      color: #777777;
+    }
+
+    .google {
+      text-align: center;
+      margin-top: 2px;
+      font-size: 15px;
+    }
+
+    .google a {
+      color: #204c87;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .authors {
+      text-align: center;
+    }
+
+    .author {
+      margin-right: 45px;
+      font-size: 21px;
+    }
+
+    .author a {
+      color: #3376cb;
+    }
+
+    #abstract {
+      line-height: 1.3;
+      width: 1000px;
+      font-size: 16px;
+    }
+
+    h2 {
+      color: #666666;
+      margin-top: 70px;
+    }
+
+    h1.supp {
+      padding-top: 40px;
+      margin-top: 0;
+      color: #aaaaaa;
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    h2.abstract {
+      color: #555555;
+      margin-top: 0px;
+    }
+
+    #files {
+      color: #555555;
+      margin-top: 20px;
+      font-size: 25px;
+    }
+
+    #files a {
+      text-decoration: None;
+      color: #3376cb;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+  <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    .menu-index {
+      color: rgb(255, 255, 255) !important;
+      opacity: 1 !important;
+      font-weight: 700 !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="headerdiv">
+    <h1>
+      SMAP: Single-Shot Multi-Person Absolute 3D Pose Estimation
+    </h1>
+  </div>
+  <div id="maincontent">
+    <div class="authors" style="margin-top: 10px">
+      <span class="author">Jianan Zhen<sup>1,2,*</sup></span>
+      <span class="author">Qi Fang<sup>1,*</sup></span>
+      <span class="author">Jiaming Sun<sup>1,2</sup></span>
+      <span class="author">Wentao Liu<sup>2</sup></span> <br>
+      <span class="author">Jiang Wei<sup>1</sup></span>
+      <span class="author">Hujun Bao<sup>1</sup></span>
+      <span class="author">Xiaowei Zhou<sup>1</sup></span>
+    </div>
+    <div class="google" style="margin-top: 10px">1. State Key Lab of CAD & CG, ZheJiang University
+      &nbsp;&nbsp;&nbsp;&nbsp; 2. SenseTime</div>
+    <div class="google" style="margin-top: 5px">* The first two authors contribute equally to this paper</div>
+
+    <div class="flex-item flex-column">
+
+      <div class="content">
+        <div class="content-table">
+          <div class="flex-row">
+            <div id="abstract">
+              <h2 class="abstract"> Abstract </h2>
+              Recovering multi-person 3D poses with absolute scales from a single RGB image is a challenging problem due
+              to the inherent depth and scale ambiguity from a single view. Addressing this ambiguity requires to
+              aggregate various cues over the entire image, such as body sizes, scene layouts, and inter-person
+              relationships. However, most previous methods adopt a top-down scheme that first performs 2D pose
+              detection and then regresses the 3D pose and scale for each detected person individually, ignoring global
+              contextual cues. In this paper, we propose a novel system that first regresses a set of 2.5D
+              representations of body parts and then reconstructs the 3D absolute poses based on these 2.5D
+              representations with a depth-aware part association algorithm. Such a single-shot bottom-up scheme allows
+              the system to better learn and reason about the inter-person depth relationship, improving both 3D and 2D
+              pose estimation. The experiments demonstrate that the proposed approach achieves the state-of-the-art
+              performance on the CMU Panoptic and MuPoTS-3D datasets and is applicable to in-the-wild videos.
+            </div>
+            <div id="files" class="center" style="margin-top: 10px">
+              [<a href="./index.html">Paper</a>]&nbsp;&nbsp;&nbsp;&nbsp;
+              [<a href="https://github.com/zju3dv/SMAP">Code</a>]&nbsp;&nbsp;&nbsp;&nbsp;
+              [<a href="./assets/supplementary_material.pdf">Supplementary Material</a>]
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-container">
+      <div class="content">
+
+        <div class="content-table flex-column">
+          <!--End Intro-->
+          <h2 class="add-top-margin">A Video for introduction</h2>
+          <div class="flex-item flex-item-stretch flex-column">
+            <video preload controls muted playsinline class="image">
+              <source src="./assets/smap.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>
