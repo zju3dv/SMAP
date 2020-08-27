@@ -73,6 +73,8 @@ bash train.sh
 
 ## Acknowledgements
 Some CUDA codes are based on [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose). We also would like to thank Qing Shuai, Zhize Zhou and Zichen Tian for their help.  
+
+## Copyright
 This work is affliated with ZJU-SenseTime Joint Lab of 3D Vision, and its intellectual property belongs to SenseTime Group Ltd.
 
 ```
