@@ -1,5 +1,5 @@
 # SMAP: Single-Shot Multi-Person Absolute 3D Pose Estimation
-> [SMAP: Single-Shot Multi-Person Absolute 3D Pose Estimation]()  
+> [SMAP: Single-Shot Multi-Person Absolute 3D Pose Estimation](https://arxiv.org/pdf/2008.11469.pdf)  
 > Jianan Zhen\*, Qi Fang\*, Jiaming Sun, Wentao Liu, Wei Jiang, Hujun Bao, Xiaowei Zhou  
 > ECCV 2020  
 > [Project Page](https://zju3dv.github.io/SMAP/)  
