@@ -8,7 +8,7 @@
 <img src="assets/framework.png" width = 70% div align=center />
 
 ## Requirements
-- PyTorch >= 1.0
+- PyTorch >= 1.3
 - gcc >= 6.0
 
 ## Start
