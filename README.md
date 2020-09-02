@@ -24,7 +24,7 @@ python setup.py install
 ```
 
 ## Run inference on custom images
-Our pretrained model can be downloaded from [SMAP](https://drive.google.com/file/d/1sGnT1y9DszpGS9wVFDhXG0LL61pKL7jX/view?usp=sharing) and [RefineNet](https://drive.google.com/file/d/1Hy3dr31FyVNgDB5UZ5VT_5_3urf_qwBW/view?usp=sharing).  
+Our pretrained model can be downloaded from [SMAP](https://drive.google.com/file/d/1HnasBCucFA39hy3SBZVFdb2EzLtmes9z/view?usp=sharing) and [RefineNet](https://drive.google.com/file/d/1m4zvXw0dWj-ZnCwCp4RRHUYkEWRP8pJ-/view?usp=sharing).  
 ```bash
 cd exps/stage3_root2
 # vim test.sh
