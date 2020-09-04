@@ -1,4 +1,4 @@
-export PROJECT_HOME='/path/to/SMAP_public'
+export PROJECT_HOME='/path/to/SMAP'
 export PYTHONPATH=$PYTHONPATH:$PROJECT_HOME
 python test.py -p "/path/to/SMAP_model.pth" \
 -t run_inference \
