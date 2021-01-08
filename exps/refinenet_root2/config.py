@@ -18,7 +18,7 @@ class Config:
 
     # -------- Data Config -------- #
     DATALOADER = edict()
-    DATALOADER.NUM_WORKERS = 0
+    DATALOADER.NUM_WORKERS = 8
     DATALOADER.ASPECT_RATIO_GROUPING = False
     DATALOADER.SIZE_DIVISIBILITY = 0
 

@@ -33,7 +33,7 @@ cd exps/stage3_root2
 # set -d test
 bash test.sh
 ```
-The result will be saved in a json file located in "model_logs/stage3_root2/result/". You can use the visualization code in "lib/visualize".
+The result will be saved in a json file located in "model_logs/stage3_root2/result/". You can use the visualization code in "lib/visualize". Note that when evaluation, we will reproject the 2D keypoints again with the refined depths if RefineNet is used, because RefineNet may change the strict projection constraint.
 
 ## Prepare Data for training  
 Put all data under the "data/" folder with symbolic link according to the specified directory structure. Or you can change the path in "dataset/data_settings.py".
@@ -73,6 +73,9 @@ bash train.sh
 
 ## Acknowledgements
 Some CUDA codes are based on [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose). We also would like to thank Qing Shuai, Zhize Zhou and Zichen Tian for their help.  
+
+## Contact
+Please open an issue or send an email to Qi Fang (fangqi19@zju.edu.cn) if you have any questions.
 
 ## Copyright
 This work is affliated with ZJU-SenseTime Joint Lab of 3D Vision, and its intellectual property belongs to SenseTime Group Ltd.
